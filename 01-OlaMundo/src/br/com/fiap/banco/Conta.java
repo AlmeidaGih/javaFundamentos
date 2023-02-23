@@ -20,8 +20,8 @@ public class Conta {
 	 */
 	private double saldo;
 	
-	public Conta() {
-		
+	public Conta(int numero) {
+		this.numero = numero;
 	}
 	
 	public Conta(int numero, int agencia, double saldo) {
