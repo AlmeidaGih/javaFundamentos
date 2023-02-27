@@ -5,7 +5,7 @@ package br.com.fiap.banco;
  * @author AlmeidaGih
  * @version 1.0
  */
-public class Conta {
+public abstract class Conta {
 	
 	/**
 	 * Número da conta
@@ -18,7 +18,7 @@ public class Conta {
 	/**
 	 * Saldo da conta
 	 */
-	private double saldo;
+	protected double saldo;
 	
 	public Conta(int numero) {
 		this.numero = numero;
@@ -69,7 +69,5 @@ public class Conta {
 	 * Verifica o saldo da conta 
 	 * @return Valor do saldo da conta
 	 */
-	public double verificarSaldo() {
-		return saldo;
-	}
+	public abstract double verificarSaldo();
 }

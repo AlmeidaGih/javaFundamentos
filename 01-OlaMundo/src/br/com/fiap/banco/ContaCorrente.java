@@ -5,6 +5,8 @@ public class ContaCorrente extends Conta{
 	
 	private double chequeEspecial;
 	
+	private double limite;
+	
 	public ContaCorrente(int numero, String tipo) {
 		super(numero);
 		this.tipo = tipo;
@@ -34,5 +36,10 @@ public class ContaCorrente extends Conta{
 	public void retirar(double valor) {
 		valor = valor + 10;
 		super.retirar(valor);
+	}
+	
+	@Override
+	public double verificarSaldo() {
+		return saldo + limite;
 	}
 }
